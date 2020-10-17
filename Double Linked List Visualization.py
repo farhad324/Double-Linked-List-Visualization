@@ -105,10 +105,12 @@ while 1:
         cv2.putText(img, "Double Linked List Visualization", (250, 35), cv2.FONT_HERSHEY_COMPLEX, 1, (255,50,30), 1, cv2.LINE_AA)
         while i< my_list.size:
             newj=j+60
-            cv2.circle(img, (22,100), 22, color=(0,0,256),thickness=2)
-            cv2.putText(img, "None", (6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
-            cv2.line(img,pt1=(82,95),pt2=(44,95),color=(256,256,256),thickness=2)
-            cv2.line(img,pt1=(82,105),pt2=(44,105),color=(256,256,256),thickness=2)
+            if i==0:
+                cv2.circle(img, (22,100), 22, color=(0,0,256),thickness=2)
+                cv2.putText(img, "None", (6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
+                cv2.line(img,pt1=(82,95),pt2=(44,95),color=(256,256,256),thickness=2)
+                cv2.line(img,pt1=(82,105),pt2=(44,105),color=(256,256,256),thickness=2)
+                cv2.putText(img, 'Size: '+str(my_list.size), (40, 170), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
             if my_list.size==1:
                 cv2.putText(img, "Head", (j-16, 40), cv2.FONT_HERSHEY_COMPLEX, 0.6, (255,50,30), 1, cv2.LINE_AA)
                 cv2.putText(img, " & ", (j-16, 58), cv2.FONT_HERSHEY_COMPLEX, 0.6, (255,50,30), 1, cv2.LINE_AA)
@@ -124,7 +126,7 @@ while 1:
                 cv2.circle(img, (newj+22,100), 22, color=(0,0,256),thickness=2)
                 cv2.putText(img, "None", (newj+6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
             cv2.putText(img, str(vals[i]), (j-6, 105), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
-            cv2.putText(img, 'Size: '+str(my_list.size), (40, 170), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
+            
             j+=60
             i+=1
             
@@ -137,10 +139,12 @@ while 1:
         cv2.putText(img, "Double Linked List Visualization", (250, 40), cv2.FONT_HERSHEY_COMPLEX, 1, (255,50,30), 1, cv2.LINE_AA)
         while i< my_list.size:
             newj=j+60
-            cv2.circle(img, (22,100), 22, color=(0,0,256),thickness=2)
-            cv2.putText(img, "None", (6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
-            cv2.line(img,pt1=(82,95),pt2=(44,95),color=(256,256,256),thickness=2)
-            cv2.line(img,pt1=(82,105),pt2=(44,105),color=(256,256,256),thickness=2)
+            if i==0:
+                cv2.circle(img, (22,100), 22, color=(0,0,256),thickness=2)
+                cv2.putText(img, "None", (6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
+                cv2.line(img,pt1=(82,95),pt2=(44,95),color=(256,256,256),thickness=2)
+                cv2.line(img,pt1=(82,105),pt2=(44,105),color=(256,256,256),thickness=2)
+                cv2.putText(img, 'Size: '+str(my_list.size), (40, 170), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
             if my_list.size==1:
                 cv2.putText(img, "Head", (j-16, 40), cv2.FONT_HERSHEY_COMPLEX, 0.6, (255,50,30), 1, cv2.LINE_AA)
                 cv2.putText(img, " & ", (j-16, 58), cv2.FONT_HERSHEY_COMPLEX, 0.6, (255,50,30), 1, cv2.LINE_AA)
@@ -156,7 +160,7 @@ while 1:
                 cv2.circle(img, (newj+22,100), 22, color=(0,0,256),thickness=2)
                 cv2.putText(img, "None", (newj+6, 100), cv2.FONT_HERSHEY_COMPLEX, 0.4, (0,0,255), 1, cv2.LINE_AA)
             cv2.putText(img, str(vals[i]), (j-6, 105), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
-            cv2.putText(img, 'Size: '+str(my_list.size), (40, 170), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)
+            
             j+=60
             i+=1
     cv2.putText(img, 'Developed by Farhad', (770, 170), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255,50,30), 1, cv2.LINE_AA)        
